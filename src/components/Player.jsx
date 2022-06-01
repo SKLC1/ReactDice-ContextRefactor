@@ -1,4 +1,7 @@
 import "../style.css";
+import { useContext } from 'react';
+import { myContext } from '../context/myContext';
+
 const Player = ({ playerName, totalScore, currentScore }) => {
   return (
     <div className="playersClass">

@@ -1,19 +1,22 @@
-import React from "react";
 import Player from "./components/Player";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import "./style.css";
 import Tools from "./components/Tools";
+import { myContext } from "./context/myContext";
+
+
 function App() {
-  const [totalScore1, setTotalScore1] = useState(0);
-  const [currentScore1, setCurrentScore1] = useState(0);
-  const [totalScore2, setTotalScore2] = useState(0);
-  const [currentScore2, setCurrentScore2] = useState(0);
-  const [imgNumber1, setImgNumber1] = useState("/images/pic-0.png");
-  const [imgNumber2, setImgNumber2] = useState("/images/pic-0.png");
-  const [player1, setPlayer1] = useState(true);
-  const [player2, setPlayer2] = useState(false);
-  const [player1name, setPlayer1name] = useState("player1");
-  const [player2name, setPlayer2name] = useState("player2");
+  const {totalScore1, setTotalScore1,
+    currentScore1, setCurrentScore1,
+    totalScore2, setTotalScore2,
+    currentScore2, setCurrentScore2,
+    imgNumber1, setImgNumber1,
+    imgNumber2, setImgNumber2,
+    player1, setPlayer1,
+    player2, setPlayer2,
+    player1name, setPlayer1name,
+    player2name, setPlayer2name,
+  } = useContext(myContext)
 
   const handleClick = () => {
     const rand1 = Math.ceil(Math.random() * 6);
@@ -25,7 +28,7 @@ function App() {
         return prev + rand1 + rand2;
       });
       if (totalScore1 > 100) {
-        setPlayer2name("win");
+        setPlayer2name("winner");
       }
     }
     if (player2 === true) {

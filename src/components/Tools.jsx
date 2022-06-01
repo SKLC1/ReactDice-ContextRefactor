@@ -1,4 +1,7 @@
 import "../style.css";
+import { useContext } from 'react';
+import { myContext } from '../context/myContext';
+
 const Tools = ({ imgNumber1, imgNumber2, handleClick, handleHold }) => {
   return (
     <div className="toolsClass">
