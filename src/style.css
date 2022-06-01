@@ -1,0 +1,38 @@
+.container{
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+}
+.toolsClass{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.playerinfo{
+    height: 100vh;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: grey;
+}
+.playersClass{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.toolsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+h3{
+    text-align: center;
+}
